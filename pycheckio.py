@@ -1,5 +1,6 @@
 #Most frequent
 
+"""
 first_list = ['a', 'a', 'bi', 'bi', 'bi']
 
 def most_frequent(x): 
@@ -13,10 +14,12 @@ def most_frequent(x):
     return num 
             
 print(most_frequent(first_list))
+"""
 
 
 #Easy unpack
 
+"""
 first_tuple = (6, 2, 9, 4, 3, 9)
 
 def easy_unpack(x):
@@ -31,10 +34,12 @@ def easy_unpack(x):
     return tuple(d) 
 
 print(easy_unpack(first_tuple))
+"""
+
 
 # Split pairs
 
-
+"""
 The example that helped me to solve:
 
 # How many elements each 
@@ -47,11 +52,12 @@ print(x)
 
 Output:
 [[1, 2, 3, 4], [5, 6, 7, 8], [9]]
-
+"""
 
 
 #separate with two 
 
+"""
 four_string = 'abcd'
 three_string = 'abc'
 five_string = 'abcde'
@@ -61,12 +67,12 @@ def test_func(x):
     return x
 
 print(test_func(three_string))
-
+"""
 
 
 #Nearest value
 
-
+"""
 set_val = {4, 7, 10, 11, 12, 17}
 val = 9
 
@@ -85,11 +91,12 @@ print(
     #list(set_val)
     nearest_value(set_val, val)
 )
-
+"""
 
 
 #Non-unique Elements
 
+"""
 listik = [1, 2, 3, 4, 5]
 listik_2 = [1, 2, 3, 1, 3]
 
@@ -101,8 +108,9 @@ def non_unique(data: list) -> list:
 print(
     non_unique(listik)
 )
+"""
 
-
+"""
 #Right to left
 
 seq_str = ("aright", "right", "left", "stop")
@@ -117,11 +125,12 @@ def right_left(phrases: tuple) -> str:
 print(
     right_left(seq_str)
 )
-
+"""
 
 
 #Days Between
 
+"""
 from datetime import datetime
 
 f_date = (2004, 1, 10)
@@ -137,10 +146,12 @@ def days_diff(a:tuple[int, int, int], b:tuple[int, int, int]) -> int:
 print(
     days_diff(f_date, s_date)
 )
+"""
 
 
 #Count Digits
 
+"""
 string = "who is 1st here"
 
 def count_digits(text: str) -> int:
@@ -155,12 +166,12 @@ def count_digits(text: str) -> int:
 print(
     count_digits(string)
 )
-
+"""
 
 
 #Duplicate Zeros
 
-
+"""
 donuts = [1, 0, 2, 0]
 
 def donuts_duplicator(donuts):
@@ -176,6 +187,7 @@ def donuts_duplicator(donuts):
 print(
     donuts_duplicator(donuts)
 )
+"""
 
 
 #First Word. Get first word from the string
