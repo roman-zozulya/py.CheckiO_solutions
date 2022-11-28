@@ -192,23 +192,31 @@ print(
 
 #First Word. Get first word from the string
 
+from detect_delimiter import detect
+import string 
 #choose string
-string = " greetings, friends "
+string_1 = " greetings, friends "
 string_2 = "... and so on ..."
+string_3 = "don't touch it"
+string_4 = "Hello.World"
 
 def first_word(text:str) -> str:
     new_list = []
-    splited_text = text.split(' ')
+    delimiter = detect(text, whitelist = [string.punctuation, string.whitespace])
+    splited_text = text.split(delimiter)
     for i in splited_text:
         if (len(i) > 0) and (i[0].isalpha() == True):
-            word = ''.join(c for c in i if c.isalpha())
-            new_list.append(word)
-    return new_list[0]
+            for c in i[::-1]:
+                if c in string.punctuation:
+                    i = i.strip(c)
+            new_list.append(i)
+    return new_list[0], delimiter
 
 
 print(
-    first_word(string)
+    first_word(string_4)
 )
+
 
 
 
