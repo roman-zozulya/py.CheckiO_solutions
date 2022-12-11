@@ -230,9 +230,45 @@ print(
 )
 """
 
-#laconic version. Coming soon...
+#First Word.
+#laconic (Medium)
+"""
+import re
 
+#choose string
+string_1 = " greetings, friends "
+string_2 = "... and so on ..."
+string_3 = "don't touch it"
+string_4 = "Hello.World"
 
+def first_word(text: str) -> str:
+    words_list = []
+    text_parts = re.findall(r"[\w'\"]+|[,.!?]", text)
+    for i in text_parts:
+        if i[0].isalpha() == True:
+            words_list.append(i)
+    return words_list[0]
 
+print(
+    first_word(string_4)
+)
+"""
 
+#First Word.
+#laconic (Super)
+"""
+import re
 
+#choose string
+string_1 = " greetings, friends "
+string_2 = "... and so on ..."
+string_3 = "don't touch it"
+string_4 = "Hello.World"
+
+def first_word(text: str) -> str:
+    return [c for c in re.findall(r"[\w'\"]+|[,.!?]", text) if c[0].isalpha() == True][0]
+
+print(
+    first_word(string_3)
+)
+"""
