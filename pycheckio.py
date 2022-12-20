@@ -272,3 +272,20 @@ print(
     first_word(string_3)
 )
 """
+"""
+#All the same
+from typing import List, Any
+
+is_same_list = [2, 1, 1, 1]
+
+
+def all_the_same(elements: List[Any]) -> bool:
+    return len(set(elements)) <= 1
+
+
+print(
+    all_the_same(is_same_list)
+)
+"""
+
+
